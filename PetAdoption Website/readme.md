@@ -61,6 +61,7 @@ This is the pet adoption website,where people can adopt various types of pets th
     ```
 
 ---
+Note:Change the backend URL to integrate frontend and backend
 
 ## Technologies Used
 - HTML
