@@ -14,7 +14,7 @@
 ---
 
 ## About the Project
-This is the pet adoption website,where people can see various types of pets and they can adopt it through online.
+This is the pet adoption website,where people can adopt various types of pets through online.
 
 ---
 
@@ -22,9 +22,10 @@ This is the pet adoption website,where people can see various types of pets and 
 -Login and SignUp Functionality.
 -Form validation using JavaScript and Django.
 -Easy-to-navigate structure.
--Quite good responsive homepage.
+-Responsive Website.
 -Carousel feature allows user to navigate through a series of images
 -Filtering the pets under pet-type,breed,gender,age.
+-Dynamic Website where everthing is done dynamically using backend
 -Email connectivity using Django(smtplib library) which helps to connect with us.
 
 ---
@@ -97,7 +98,8 @@ Backend/
 │   ├── urls.py
 │   ├── wsgi.py
 │   ├── asgi.py
-│
+├── media/
+│   ├── pets/
 ├── app/
 │   ├── migrations/
 │   │   └── __init__.py
