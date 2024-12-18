@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header class="header-top">
+
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+            <div style="display: flex; align-items: center;">
+                <img src="./assets/petlogo.png" alt="Logo" class="logo">
+                <button class="menu-toggle" id="menu-toggle">
+                    <!-- Hamburger icon -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul id="nav_head" class="nav-links">
+                    <a href="#">
+                        <li data-section="home">Home</li>
+                    </a>
+                    <a href="#">
+                        <li data-section="about">Adopt</li>
+                    </a>
+                    <a href="#">
+                        <li data-section="services">Get Involved</li>
+                    </a>
+                    <a href="#">
+                        <li data-section="contact">Blog</li>
+                    </a>
+                    <a href="#">
+                        <li data-section="contact">About Us</li>
+                    </a>
+                </ul>
+            </div>
+            <button id="open-modal" class="contact-btn">Contact Us</button>
+        </div>
+    </header>
+
+    <div class="hero-container">
+        <div class="sub-hero-container">
+            <h2>Embrace Endless Love with Your New Furry <br>Best Friend.</h2>
+            <p class="para1">Embrace endless love with your new furry best friend.</p>
+            <p class="para2">Adopt now and start creating unforgettable memories together.</p>
+        </div>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 80%;">
+            <!-- Indicators -->
+            <ol class="carousel-indicators" style="transform: translateX(30px) translateY(20px);">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" style=" width: 90%; margin-left: 50px; height: 100%;">
+                <div class="item active">
+                    <img src="./assets/dog_love.jpg" alt="Los Angeles" style="width:100%; border-radius: 20px;">
+                </div>
+
+                <div class="item">
+                    <img src="./assets/cat_love.jpg" alt="Chicago" style="width:100%; border-radius: 20px;">
+                </div>
+
+                <div class="item">
+                    <img src="./assets/rabbit_love.png" alt="New york" style="width:100%; border-radius: 20px;">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="pet-finder">
+        <div class="sub_pet-finder">
+            <p>Find Your New Best Friend</p>
+            <div class="filters">
+                <div class="dropdown">
+                    <label for="pet-type">Pet Type</label>
+                    <select id="pet-type">
+                        <option value="all">All</option> <!-- Default option -->
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <label for="breed">Breed</label>
+                    <select id="breed">
+                        <option value="all">All Breeds</option> <!-- Default option -->
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option value="all">All Genders</option> <!-- Default option -->
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <label for="age">Age</label>
+                    <select id="age">
+                        <option value="all">All Ages</option> <!-- Default option -->
+                    </select>
+                </div>
+                <div style="display: flex; align-items: flex-end; margin-right: 20px;">
+                    <button class="btn1" onclick="clearFilters()">Clear</button>
+                    <button class="btn2" onclick="applyFilters()">Search</button>
+                </div>
+            </div>
+            <div class="pets"></div>
+        </div>
+    </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn close-modal">&times;</span>
+            <span class="modal-head">Contact Us</span>
+            <div class="modal_container1">
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <img src="./assets/petlogo.png" alt="" class="logo">
+                    <h4 style="margin-left: 10px;">Your Pet Adoption Farm</h4>
+                </div>
+                <p>Address</p>
+                <p>#12, West Garden Street,<br>
+                    BKL West Modern City,<br>
+                    Newyork -49585.</p>
+                <img src="./assets/dog_cat.png" alt="" class="modal-image">
+            </div>
+            <div class="modal_container2">
+                <h4>Connect Us</h4>
+                <form id="contactForm" method="POST" action="http://192.168.1.6:8000/email/">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" required></textarea>
+
+                    <button class="send-button" type="submit">Send</button>
+                </form>
+                <button class="close-button" onclick="CloseModal()">Close</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./js/home.js"></script>
+</body>
+
+</html>

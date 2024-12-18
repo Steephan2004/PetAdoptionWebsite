@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in & Sign Up</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="container right-panel-active">
+        <!-- Login -->
+        <div class="container__form container--login">
+            <form action="#" class="form" id="form1">
+                <div class="form_container">
+                    <div class="form_container-logo">
+                        <img src="./assets//logo.png" alt="" class="logo">
+                        <img src="./assets//logoname.png" alt="" class="logoname">
+                    </div>
+                    <p class="form__title">Login</p>
+                    <label for="username">Username</label>
+                    <input type="text" class="input" id="username" name="username" required />
+                    <label for="password">Password</label>
+                    <input type="password" class="input" id="password" name="password" required />
+                    <button class="btn">Login</button>
+                    <p>Don't have an account?<span><a id="register" href="#" class="register">Register</a></span></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Register -->
+        <div class="container__form container--register">
+            <form action="#" class="form" id="form2">
+                <div class="form_container1">
+                    <div class="form_container-logo">
+                        <img src="./assets/logo.png" alt="" class="logo">
+                        <img src="./assets/logoname.png" alt="" class="logoname">
+                    </div>
+                    <p class="form__title">Please Fill out the form to Register</p>
+                    <label for="username">Username</label>
+                    <input type="text" class="input" id="username1" required />
+                    <label for="email">Email</label>
+                    <input type="email" class="input" id="email" required />
+                    <label for="password">Password</label>
+                    <input type="password" class="input" id="password1" required />
+                    <label for="confirmpassword">Confirm Password</label>
+                    <input type="password" class="input" id="confirmpassword" required />
+                    <button class="btn" id="registerButton" type="button">Register</button>
+                    <p>Yes, I have an account!<span><a id="login" href="#" class="register">Login</a></span></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <img src="./assets/pet.png" alt="pet" class="side_img">
+                </div>
+                <div class="overlay__panel overlay--right">
+                    <img src="./assets/pet1.png" alt="pet" class="side_img">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/login.js"></script>
+
+</html>
