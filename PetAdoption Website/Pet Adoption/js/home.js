@@ -1,3 +1,5 @@
+const BASE_URL = "http://192.168.43.221:8000";
+
 const listItems = document.querySelectorAll('#nav_head li');
 listItems.forEach((item) => {
     item.addEventListener('click', function () {
@@ -93,7 +95,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     };
 
     // Send the form data to your backend API using fetch
-    fetch('http://192.168.1.6:8000/email/', {
+    fetch(`${BASE_URL}/email/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json', // Send as JSON
@@ -120,7 +122,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 document.addEventListener("DOMContentLoaded", () => {
     const petsContainer = document.querySelector(".pets");
   
-    fetch("http://192.168.1.6:8000/pets/") // Replace with your API URL
+    fetch(`${BASE_URL}/pets/`) // Replace with your API URL
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch pet data");
@@ -130,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((pets) => {
         pets.forEach((pet) => {
           const petImg = document.createElement("img");
-          petImg.src = `http://192.168.1.6:8000${pet.image}`;
+          petImg.src = `${BASE_URL}${pet.image}`;
           petImg.alt = pet.type;
           petImg.setAttribute("data-type", pet.type);
           petImg.setAttribute("data-breed", pet.breed);
@@ -147,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function fetchFilterOptions() {
     try {
-        const response = await fetch('http://192.168.1.6:8000/filter-options/');
+        const response = await fetch(`${BASE_URL}/filter-options/`);
         const data = await response.json();
 
         // Populate the Pet Type dropdown
