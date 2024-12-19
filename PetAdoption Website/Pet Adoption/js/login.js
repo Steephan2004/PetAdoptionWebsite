@@ -1,3 +1,5 @@
+const BASE_URL = "http://192.168.43.221:8000";
+
 const registerBtn = document.getElementById("register");
 const loginBtn = document.getElementById("login");
 const fistForm = document.getElementById("form1");
@@ -33,7 +35,7 @@ document
     };
 
     // Send data to the backend
-    fetch("http://192.168.1.6:8000/register/", {
+    fetch(`${BASE_URL}/register/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -71,7 +73,7 @@ document.querySelector(".btn").addEventListener("click", function (e) {
   };
 
   // Send login request to backend
-  fetch("http://192.168.1.6:8000/login/", {
+  fetch(`${BASE_URL}/login/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
