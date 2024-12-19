@@ -55,11 +55,15 @@ This is the pet adoption website,where people can adopt various types of pets th
     ```
     Note:ensure first you installed Python in your laptop
 
-6.Run the backend:
+6. Run the backend:
     ```bash
     py manage.py runserver
     ```
-
+7. Access Admin page in backend to upload pet images,types and specs:
+   Add /admin in the URL.
+   username:Steve
+   password:1234
+   
 ---
 Note:Change the backend URL to integrate frontend and backend
 
@@ -69,6 +73,7 @@ Note:Change the backend URL to integrate frontend and backend
 - JavaScript
 - Django
 - DjangoRestFramework
+- SQLite3
 
 ---
 
